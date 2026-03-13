@@ -24,11 +24,9 @@ def query(left, right):
 
 N, M, K = map(int, input().split())
 size = int(N ** 0.5)
-data = [0] * N
-for i in range(N):
-    data[i] = int(input().strip())
+data = [int(input()) for _ in range(N)]
 
-bucket = [0] * N
+bucket = [0] * (N // size + 1)
 for i in range(N):
     bucket[i // size] += data[i]
 
