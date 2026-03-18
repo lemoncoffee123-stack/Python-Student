@@ -19,7 +19,7 @@ for _ in range(M):
     if a == 0:
         union(b, c)
     else:
-        if uf[b] == uf[c]:
+        if find(b) == find(c):
             print(1)
         else:
             print(0)
