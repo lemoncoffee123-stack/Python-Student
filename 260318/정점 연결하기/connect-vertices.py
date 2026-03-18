@@ -1,6 +1,11 @@
 def union(x, y):
     X, Y = find(x), find(y)
-    uf[Y] = X
+    if X != Y:
+        if X < Y:
+            uf[Y] = X
+
+        else:
+            uf[X] = Y
 
 
 def find(x):
@@ -24,4 +29,4 @@ while True:
 for i in range(1, n + 1):
     result.add(find(i))
 
-print(*result)
+print(*sorted(list(result)))
