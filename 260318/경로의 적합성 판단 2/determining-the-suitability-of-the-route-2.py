@@ -1,7 +1,7 @@
 def union(x, y):
-    if uf[x] == x:
-        return x
-    return find(uf[x])
+    X, Y = find(x), find(y)
+    uf[X] = Y
+    return
 
 
 def find(x):
