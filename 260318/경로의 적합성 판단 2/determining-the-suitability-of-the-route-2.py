@@ -14,7 +14,7 @@ def find(x):
 
 
 n, m, k = map(int, input().split())
-uf = [0] * (n + 1)
+uf = [i for i in range(n + 1)]
 for _ in range(m):
     a, b = map(int, input().split())
     union(a, b)
