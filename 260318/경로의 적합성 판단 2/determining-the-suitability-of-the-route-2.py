@@ -1,0 +1,28 @@
+def union(x, y):
+    if uf[x] == x:
+        return x
+    return find(uf[x])
+
+
+def find(x):
+    if uf[x] == x:
+        return x
+
+    root_node = find(uf[x])
+    uf[x] = root_node
+    return root_node
+
+
+n, m, k = map(int, input().split())
+uf = [0] * (n + 1)
+for _ in range(m):
+    a, b = map(int, input().split())
+    union(a, b)
+
+check = list(map(int, input().split()))
+for i in check:
+    if find(check[0]) != find(i):
+        print(0)
+        exit()
+else:
+    print(1)
