@@ -20,9 +20,9 @@ for i in range(word_len):
 
 for _ in range(q):
     a, b = map(int, input().split())
-    i, j = a * 2 - 1, b * 2 - 1
-    S = A[i:j+1]
-    if S[::] == S[::-1]:
+    mid = a + b - 1
+
+    if A[mid] >= (b - a + 1):
         print("Yes")
     else:
         print("No")
