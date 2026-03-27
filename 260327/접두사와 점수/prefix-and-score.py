@@ -24,12 +24,13 @@ class Trie:
     
     def search(self, word):
         node = self.root
-        for char in word:
+        result = 0
+        for idx, char in enumerate(word):
             if char not in node.children:
                 return 0
             node = node.children[char]
-
-        return node.count * len(word)
+            result = max(result, idx + 1)
+        return max(result, node.count * len(word))
 
 
 trie = Trie()
