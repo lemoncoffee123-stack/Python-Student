@@ -1,3 +1,5 @@
+import sys
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -27,15 +29,13 @@ class Trie:
                 return 0
             node = node.children[char]
 
-        if node.count > 1:
-            return node.count * len(word)
-        else:
-            return len(word)
+        return node.count * len(word)
 
 
 trie = Trie()
-N = int(input())
-words = list(input().split())
+input_data = sys.stdin.read().split()
+N = int(input_data[0])
+words = input_data[1:]
 for word in words:
     trie.insert(word)
 
