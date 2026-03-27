@@ -25,14 +25,12 @@ class Trie:
         node = self.root
         for i in range(len_prefix):
             if prefix[i] not in node.children:
-                print(node.count, end=" ")
                 for _ in range(len_prefix - i):
                     print(0, end=" ")
                 return 
 
-            if i != 0:
-                print(node.count, end=" ")
             node = node.children[prefix[i]]
+            print(node.count, end=" ")
 
 
 trie = Trie()
