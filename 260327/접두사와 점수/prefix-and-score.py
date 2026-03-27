@@ -26,7 +26,11 @@ class Trie:
             if char not in node.children:
                 return 0
             node = node.children[char]
-        return node.count * len(word)
+
+        if node.count > 1:
+            return node.count * len(word)
+        else:
+            return len(word)
 
 
 trie = Trie()
