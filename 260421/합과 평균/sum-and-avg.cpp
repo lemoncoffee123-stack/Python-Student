@@ -7,6 +7,9 @@ int main() {
     cin >> a >> b;
     int total = a + b;
     double average = (double)total / 2;
-    cout << total << " " << average;
+    cout << total << " ";
+    cout << fixed;
+    cout.precision(1);
+    cout << average;
     return 0;
 }
