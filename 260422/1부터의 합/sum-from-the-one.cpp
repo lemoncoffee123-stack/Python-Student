@@ -9,7 +9,7 @@ int main() {
     for (int i = 1; i <= 100; i++) {
         a += i;
         if (a >= n) {
-            cout << i;
+            cout << i:
             break;
         }
     }
