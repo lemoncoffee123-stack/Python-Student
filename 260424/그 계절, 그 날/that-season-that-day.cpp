@@ -17,7 +17,7 @@ int main() {
     }
     is_impossible = false;
     if (m == 2) {
-        if (is_yun && d > 29) {
+        if (is_yun && d > 30) {
             is_impossible = true;
         }
     }
