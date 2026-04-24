@@ -15,10 +15,14 @@ int main() {
         }
         else is_yun = true;
     }
+   
     is_impossible = false;
     if (m == 2) {
-        if (is_yun && d > 30) {
-            is_impossible = true;
+        if (!is_yun) {
+            if (d > 28) is_impossible = true;
+        }
+        else {
+            if (d > 29) is_impossible = true;
         }
     }
 
